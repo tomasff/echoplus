@@ -1,0 +1,28 @@
+{
+    "name": "EchoPlus",
+    "description": "Improves the use of the Echo360 platform",
+    "version": "1.0.2",
+    "manifest_version": 2,
+    "content_scripts": [
+      {
+        "matches": ["https://echo360.org.uk/lesson/*/classroom"],
+        "js": ["addButtons.js"]
+      }
+    ],
+    "web_accessible_resources": ["buttons.html"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "128": "/images/logo128.png"
+      }
+    },
+    "applications": {
+      "gecko": {
+        "id": "echoplus@tomff.com"
+      }
+    },
+    "icons": {
+      "128": "/images/logo128.png"
+    }
+  }
+  
