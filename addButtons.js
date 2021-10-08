@@ -5,7 +5,7 @@ fetch(chrome.runtime.getURL('/buttons.html'))
     document.getElementsByClassName('right')[1].insertAdjacentHTML('beforeEnd', data);
     
     // Get Echo360 data
-    let echo360 = JSON.parse(removeUntil(document.getElementsByTagName('script')[11].innerHTML.split('\n')[2], '{').slice(0, -3).replace(/\\/g, ''));
+    let echo360 = JSON.parse(removeUntil(document.getElementsByTagName('script')[12].innerHTML.split('\n')[2], '{').slice(0, -3).replace(/\\/g, ''));
 
     let sectionId = echo360.section.section.id;
     let currentLessonId = echo360.lesson.id;
